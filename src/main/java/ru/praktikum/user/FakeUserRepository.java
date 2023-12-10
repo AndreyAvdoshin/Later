@@ -17,7 +17,7 @@ public class FakeUserRepository implements UserRepository {
 
     @Override
     public User save(User user) {
-        throw new UnsupportedOperationException("Метод save() ещё не готов");
+        return createFakeUser(FAKE_USERS.size() + 1);
     }
 
     private static List<User> createManyFakeUsers(int count) {
